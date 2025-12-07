@@ -226,7 +226,26 @@
 - 이 프로젝트는 **MIT License** 하에 배포됩니다.  
   자세한 내용은 저장소의 `LICENSE` 파일을 참고하세요.
 
+  ### 폰트 사용 및 출처
+
+-  이 프로젝트의 코드 렌더링에는 **NAVER D2Coding 폰트**가 사용되었습니다.  
+  브라우저 환경에 의존하지 않고 동일한 타이포그래피를 유지하기 위해  
+  HTML 내부에 **Base64 인라인 폰트 데이터**로 포함하였습니다.
+
+- 폰트 출처: https://github.com/naver/d2codingfont  
+- 사용한 버전: D2Coding (Basic, Bold 미포함)
+
+```css
+@font-face {
+    font-family: 'CodePoetryFont';
+    /* D2Coding Basic (bold 미포함) — base64 인라인 포함 */
+    /* https://github.com/naver/d2codingfont */
+    src: url(data:font/woff2;charset=utf-8;base64, ... ) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
 - 참고 및 영감
   - Stéphane Mallarmé, *Un coup de dés jamais n’abolira le hasard*  
   - 현대 코드 에디터(특히 VS Code)의 레이아웃과 단축키 인터페이스  
-  - “코드의 독자가 누구인가?”에 대하여 코드 작성의 수행성을 재고한다.
